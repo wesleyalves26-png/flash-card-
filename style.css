@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #1b8f3a;
+    --dark-green: #075e28;
+    --blue: #1769aa;
+    --background: #eaf7ee;
+    --white: #ffffff;
+    --black: #111111;
+    --road: #333333;
+    --yellow: #ffd500;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: var(--background);
+    color: var(--black);
+
+    min-height: 100vh;
+
+    line-height: 1.5;
+}
+
+/* CABEÇALHO */
+
+.topo {
+    background: var(--dark-green);
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+.topo h1 {
+    font-size: 2.2rem;
+}
+
+.topo p {
+    font-size: 1.1rem;
+}
+
+/* CONTEÚDO */
+
+main {
+    width: 95%;
+    max-width: 900px;
+
+    margin: 20px auto;
+}
+
+/* INFORMAÇÕES */
+
+.informacoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+.informacoes div {
+    background: white;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    flex: 1;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.informacoes strong,
+.informacoes span {
+    display: block;
+}
+
+.informacoes span {
+    font-size: 1.3rem;
+    color: var(--green);
+}
+
+/* JOGO */
+
+.game {
+    width: 100%;
+    height: 600px;
+
+    overflow: hidden;
+
+    border: 5px solid #111;
+    border-radius: 15px;
+
+    background: #6bc36b;
+
+    position: relative;
+}
+
+.road {
+    width: 60%;
+    height: 100%;
+
+    margin: auto;
+
+    background: var(--road);
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-left: 8px solid white;
+    border-right: 8px solid white;
+}
+
+/* LINHAS DA PISTA */
+
+.lane-line {
+    position: absolute;
+
+    width: 8px;
+    height: 80px;
+
+    background: var(--yellow);
+
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.line1 {
+    top: 0;
+}
+
+.line2 {
+    top: 200px;
+}
+
+.line3 {
+    top: 400px;
+}
+
+/* CARRO */
+
+.car {
+    position: absolute;
+
+    bottom: 40px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 55px;
+
+    z-index: 5;
+
+    user-select: none;
+
+    transition: left 0.12s;
+}
+
+/* OBJETOS */
+
+.object {
+    position: absolute;
+
+    font-size: 42px;
+
+    z-index: 4;
+
+    user-select: none;
+}
+
+/* CONTROLES */
+
+.controles {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    margin: 20px 0;
+}
+
+button {
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    background: var(--blue);
+
+    color: white;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: transform 0.15s, background 0.15s;
+}
+
+button:hover {
+    background: #0d4e83;
+
+    transform: scale(1.04);
+}
+
+button:focus {
+    outline: 4px solid #ffbf00;
+    outline-offset: 3px;
+}
+
+/* ACESSIBILIDADE */
+
+.acessibilidade {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    margin-top: 15px;
+
+    text-align: center;
+}
+
+.acessibilidade h2 {
+    margin-bottom: 15px;
+}
+
+.acessibilidade button {
+    margin: 5px;
+}
+
+/* SUSTENTABILIDADE */
+
+.educacao {
+    background: white;
+
+    padding: 20px;
+
+    margin-top: 15px;
+
+    border-left: 8px solid var(--green);
+
+    border-radius: 10px;
+}
+
+.educacao h2 {
+    color: var(--dark-green);
+
+    margin-bottom: 10px;
+}
+
+.legenda {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+/* MENSAGEM */
+
+.message {
+    background: #fff8d6;
+
+    border: 2px solid #d8b300;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin-top: 15px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+/* REINICIAR */
+
+.restart {
+    display: block;
+
+    margin: 20px auto;
+
+    background: var(--green);
+}
+
+.restart:hover {
+    background: var(--dark-green);
+}
+
+/* RODAPÉ */
+
+footer {
+    background: #123b23;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 30px;
+}
+
+/* ALTO CONTRASTE */
+
+.high-contrast {
+    --background: #000000;
+    --white: #000000;
+    --black: #ffffff;
+    --green: #00ff00;
+    --dark-green: #000000;
+    --blue: #ffff00;
+}
+
+.high-contrast .game {
+    border-color: white;
+}
+
+.high-contrast .road {
+    background: #111111;
+}
+
+/* REDUÇÃO DE ANIMAÇÕES */
+
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.001ms !important;
+
+    scroll-behavior: auto !important;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .topo h1 {
+        font-size: 1.7rem;
+    }
+
+    .game {
+        height: 500px;
+    }
+
+    .road {
+        width: 75%;
+    }
+
+    .informacoes {
+        flex-direction: column;
+    }
+
+    .legenda {
+        grid-template-columns: 1fr;
+    }
+
+    .controles button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}

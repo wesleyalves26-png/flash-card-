@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flash Car - Corrida Sustentável</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topo">
+        <h1>🚗 Flash Car</h1>
+        <p>Corrida sustentável e acessível</p>
+    </header>
+
+    <main>
+
+        <section class="informacoes">
+            <div>
+                <strong>Pontuação</strong>
+                <span id="score">0</span>
+            </div>
+
+            <div>
+                <strong>Velocidade</strong>
+                <span id="speed">1</span>
+            </div>
+
+            <div>
+                <strong>Impacto ambiental</strong>
+                <span id="ecoScore">100%</span>
+            </div>
+        </section>
+
+        <section
+            id="game"
+            class="game"
+            aria-label="Área do jogo Flash Car"
+        >
+
+            <div class="road">
+
+                <div class="lane-line line1"></div>
+                <div class="lane-line line2"></div>
+                <div class="lane-line line3"></div>
+
+                <div
+                    id="player"
+                    class="car"
+                    aria-label="Seu carro"
+                >
+                    🚗
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="controles">
+
+            <button id="leftBtn" aria-label="Mover carro para esquerda">
+                ⬅️
+            </button>
+
+            <button id="pauseBtn" aria-label="Pausar ou continuar o jogo">
+                ⏸️ Pausar
+            </button>
+
+            <button id="rightBtn" aria-label="Mover carro para direita">
+                ➡️
+            </button>
+
+        </section>
+
+        <section class="acessibilidade">
+
+            <h2>♿ Acessibilidade</h2>
+
+            <button id="contrastBtn">
+                Ativar alto contraste
+            </button>
+
+            <button id="motionBtn">
+                Reduzir animações
+            </button>
+
+        </section>
+
+        <section class="educacao">
+
+            <h2>🌱 Sustentabilidade</h2>
+
+            <p>
+                Durante a corrida, colete elementos sustentáveis
+                e evite itens que prejudicam o meio ambiente.
+            </p>
+
+            <div class="legenda">
+
+                <span>🌳 Árvore = + pontos</span>
+                <span>♻️ Reciclagem = + pontos</span>
+                <span>☀️ Energia limpa = + pontos</span>
+                <span>💨 Poluição = - pontos</span>
+
+            </div>
+
+        </section>
+
+        <section
+            id="message"
+            class="message"
+            aria-live="polite"
+        >
+            Use as setas ← → para dirigir.
+        </section>
+
+        <button id="restartBtn" class="restart">
+            🔄 Reiniciar jogo
+        </button>
+
+    </main>
+
+    <footer>
+        <p>
+            Flash Car © 2026 — Educação, sustentabilidade e acessibilidade.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
